@@ -13,4 +13,12 @@ class Prodotti
         $this->prezzo = $prezzo;
         $this->immagine = $immagine;
     }
+
+    public function getFullData()
+    {
+        return
+        '<span class="text-primary">Titolo: </span>' . $this->titolo . '<br />'
+        .'<span class="text-primary">Titolo: </span>' . $this->prezzo . '<br />'
+        .'<span class="text-primary">Titolo: </span>' . $this->immagine . '<br />';    }
+
 }
