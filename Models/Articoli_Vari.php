@@ -16,4 +16,10 @@ class Articoli_Vari extends Prodotti
         $this->peso = $peso;
         $this->categoria = $categoria;
     }
+    public function getData()
+    {
+        return
+            '<span class="card-text">Peso: g </span>' . $this->peso . '<br />';
+    }
+
 }

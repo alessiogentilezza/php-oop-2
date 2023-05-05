@@ -8,9 +8,9 @@ require_once __DIR__ . '/Models/Categoria.php';
 $gatti = new Categoria('iconaGatto');
 $cani = new Categoria('iconaCane');
 
-$palla = new Giochi('Palla per denti', 10, 'images/palla.jpg', 'plastica', $cani);
+$palla = new Giochi('Palla massaggia gengive', 10, 'images/palla.jpg', 'plastica', $cani);
 $crocchette = new Cibi('Crocchette di pollo', 7, 'images/crocchette.webp', 300, $gatti);
-$cuccia = new Articoli_Vari('Cuccia Morbida', 40, 'images/cuccia.webp', '500g', $cani);
+$cuccia = new Articoli_Vari('Cuccia Morbida', 40, 'images/cuccia.webp', 500, $cani);
 // var_dump($palla);
 // var_dump($crocchette);
 // var_dump($cuccia);
@@ -38,6 +38,7 @@ $cuccia = new Articoli_Vari('Cuccia Morbida', 40, 'images/cuccia.webp', '500g', 
                 <div class="card-body">
                     <?php
                     echo $palla->getFullData();
+                    echo $palla->getData();
                     ?>
                 </div>
             </div>
@@ -58,6 +59,7 @@ $cuccia = new Articoli_Vari('Cuccia Morbida', 40, 'images/cuccia.webp', '500g', 
                 <div class="card-body">
                     <?php
                     echo $cuccia->getFullData();
+                    echo $cuccia->getData();
                     ?>
                 </div>
             </div>

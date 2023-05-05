@@ -16,4 +16,11 @@ class Giochi extends Prodotti
         $this->materiale = $materiale;
         $this->categoria = $categoria;
     }
+
+    public function getData()
+    {
+        return
+            '<span class="card-text">Materiale: € </span>' . $this->materiale . '<br />';
+    }
+
 }
