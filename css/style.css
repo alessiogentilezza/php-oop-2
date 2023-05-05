@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(231, 219, 219, 0.918) !important;
+    padding-top: 30px;
+}
+
+.container {
+    padding: 10px;
+    background-color: rgba(68, 221, 170, 0.514);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 5px #333333;
+}
+
+li {
+    list-style: none;
+}

@@ -17,8 +17,13 @@ class Prodotti
     public function getFullData()
     {
         return
-        '<span class="text-primary">Titolo: </span>' . $this->titolo . '<br />'
-        .'<span class="text-primary">Titolo: </span>' . $this->prezzo . '<br />'
-        .'<span class="text-primary">Titolo: </span>' . $this->immagine . '<br />';    }
+            '<span class="card-text">Tipo: </span>' . $this->titolo . '<br />'
+            . '<span class="card-text">Prezzo: € </span>' . $this->prezzo . '<br />';
+    }
+    public function getImg()
+    {
+        return
+        "<img src=' $this->immagine' class='card-img-top'>";
 
+    }
 }
