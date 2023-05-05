@@ -20,11 +20,13 @@ class Giochi extends Prodotti
     public function getData()
     {
         return
-            '<span class="card-text">Materiale: € </span>' . $this->materiale . '<br />';
+            '<span class="card-text">Materiale: </span>' . $this->materiale . '<br />';
     }
     public function getCategoria()
     {
+
         return
-            "<img src=' $this->categoria' class='card-img-top'>";
+            $this->categoria->tipoAnimale;
+        // "<img src='" . $this->categoria->tipoAnimale . "'class='card-img-top'>";
     }
 }

@@ -5,13 +5,13 @@ require_once __DIR__ . '/Models/Cibi.php';
 require_once __DIR__ . '/Models/Articoli_Vari.php';
 require_once __DIR__ . '/Models/Categoria.php';
 
-$gatti = new Categoria('img_gatto');
+$gatti = new Categoria('<i class="fa-solid fa-cat"></i>');
+$cani = new Categoria('<i class="fa-solid fa-dog"></i>');
+// $cani = new Categoria('images/dog-solid.svg');
 
-$cani = new Categoria('images/dog-solid.svg');
-
-$palla = new Giochi('Palla massaggia gengive', 10, 'images/palla.jpg', 'plastica', $cani);
+$palla = new Giochi('Palla massaggia gengive', 10, 'images/palla.jpg', 'Plastica', $cani);
 $crocchette = new Cibi('Crocchette di pollo', 7, 'images/crocchette.webp', 300, $gatti);
-$cuccia = new Articoli_Vari('Cuccia Morbida', 40, 'images/cuccia.webp', 500, $cani);
+$cuccia = new Articoli_Vari('Cuccia Morbida', 40, 'images/cuccia.webp', 500, $gatti);
 // var_dump($palla);
 // var_dump($crocchette);
 // var_dump($cuccia);
@@ -52,6 +52,8 @@ $cuccia = new Articoli_Vari('Cuccia Morbida', 40, 'images/cuccia.webp', 500, $ca
             <div class="card-body">
                 <?php
                 echo $crocchette->getFullData();
+                echo $crocchette->getData();
+                echo $crocchette->getCategoria();
                 ?>
             </div>
         </div>
@@ -63,6 +65,7 @@ $cuccia = new Articoli_Vari('Cuccia Morbida', 40, 'images/cuccia.webp', 500, $ca
                 <?php
                 echo $cuccia->getFullData();
                 echo $cuccia->getData();
+                echo $cuccia->getCategoria();
                 ?>
             </div>
         </div>

@@ -19,7 +19,13 @@ class Articoli_Vari extends Prodotti
     public function getData()
     {
         return
-            '<span class="card-text">Peso: g </span>' . $this->peso . '<br />';
+            '<span class="card-text">Peso: </span>' . $this->peso . '<span> g</span>' . '<br />';
     }
+    public function getCategoria()
+    {
 
+        return
+            $this->categoria->tipoAnimale;
+        // "<img src='" . $this->categoria->tipoAnimale . "'class='card-img-top'>";
+    }
 }
