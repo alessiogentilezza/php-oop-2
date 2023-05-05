@@ -9,7 +9,7 @@ class Giochi extends Prodotti
     public $materiale;
     public $categoria;
 
-    public function __construct($titolo, $prezzo, $immagine, $materiale, $categoria)
+    public function __construct($titolo, $prezzo, $immagine, $materiale, Categoria $categoria)
 
     {
         parent::__construct($titolo, $prezzo, $immagine);
@@ -22,5 +22,9 @@ class Giochi extends Prodotti
         return
             '<span class="card-text">Materiale: € </span>' . $this->materiale . '<br />';
     }
-
+    public function getCategoria()
+    {
+        return
+            "<img src=' $this->categoria' class='card-img-top'>";
+    }
 }
