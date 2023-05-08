@@ -1,9 +1,13 @@
 <?php
 require_once __DIR__ . '/Prodotti.php';
+require_once __DIR__ . '../Traits/DimensioniPacco.php';
+
 
 
 class Giochi extends Prodotti
 {
+    use DimensioniPacco;
+
 
     public $materiale;
     public $secondaCategoria;
