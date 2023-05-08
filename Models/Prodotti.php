@@ -34,7 +34,7 @@ class Prodotti
     {
 
         return
-            $this->categoria->tipoAnimale;
+            'Categoria: ' . $this->categoria->tipoAnimale;
         // "<img src='" . $this->categoria->tipoAnimale . "'class='card-img-top'>";
 
     }

@@ -11,15 +11,15 @@ $cani = new Categoria('<i class="fa-solid fa-dog"></i>');
 
 $palla = new Giochi('Palla massaggia gengive', 10, 'images/palla.jpg', $cani, 'Plastica');
 $palla->setFullDim(10, 10, 10, 'cm');
+
 $crocchette = new Cibi('Crocchette di pollo', 7, 'images/crocchette.webp', $gatti, 300);
 $cuccia = new Articoli_Vari('Cuccia Morbida', 40, 'images/cuccia.webp', $gatti, 500);
-
 
 // var_dump($palla);
 // var_dump($crocchette);
 // var_dump($cuccia);
 
-// $gatti->secondaCategoria = '<i class="fa-solid fa-cat"></i>';
+$gatti->secondaCategoria = ' - <i class="fa-solid fa-cat"></i>';
 ?>
 
 <!DOCTYPE html>
@@ -35,10 +35,6 @@ $cuccia = new Articoli_Vari('Cuccia Morbida', 40, 'images/cuccia.webp', $gatti, 
     <link rel="stylesheet" href="css/style.css" />
 
 </head>
-
-
-
-
 
 <body>
     <div class="container d-flex justify-content-around">
@@ -56,8 +52,17 @@ $cuccia = new Articoli_Vari('Cuccia Morbida', 40, 'images/cuccia.webp', $gatti, 
                 </li>
                 <div class="card-footer">
                     <?php
+                    try {
+                        echo $palla->getPeso(0.3);
+                    } catch (Exception $e) {
+                        echo 'Eccezione: ' . $e->getMessage();
+                    }
+                    ?>
+                </div>
+                <div class="card-footer">
+                    <?php
                     echo $palla->getCategoria();
-                    // echo $gatti->secondaCategoria;
+                    echo $gatti->secondaCategoria;
                     ?>
                 </div>
             </ul>
