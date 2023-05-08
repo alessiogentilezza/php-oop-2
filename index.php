@@ -5,12 +5,15 @@ require_once __DIR__ . '/Models/Cibi.php';
 require_once __DIR__ . '/Models/Articoli_Vari.php';
 require_once __DIR__ . '/Models/Categoria.php';
 
+
 $gatti = new Categoria('<i class="fa-solid fa-cat"></i>');
 $cani = new Categoria('<i class="fa-solid fa-dog"></i>');
 
 $palla = new Giochi('Palla massaggia gengive', 10, 'images/palla.jpg', $cani, 'Plastica');
+$palla->setFullDim(10, 10, 10, 'cm');
 $crocchette = new Cibi('Crocchette di pollo', 7, 'images/crocchette.webp', $gatti, 300);
 $cuccia = new Articoli_Vari('Cuccia Morbida', 40, 'images/cuccia.webp', $gatti, 500);
+
 
 // var_dump($palla);
 // var_dump($crocchette);
@@ -33,47 +36,70 @@ $cuccia = new Articoli_Vari('Cuccia Morbida', 40, 'images/cuccia.webp', $gatti, 
 
 </head>
 
+
+
+
+
 <body>
     <div class="container d-flex justify-content-around">
         <div class="card" style="width: 18rem;">
             <?php
             echo $palla->getImg();
             ?>
-            <div class="card-body">
-                <?php
-                echo $palla->getFullData();
-                echo $palla->getData();
-                echo $palla->getCategoria();
-                // echo $gatti->secondaCategoria;
-                ?>
-            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <?php
+                    echo $palla->getFullData();
+                    echo $palla->getData();
+                    echo $palla->getFullDim();
+                    ?>
+                </li>
+                <div class="card-footer">
+                    <?php
+                    echo $palla->getCategoria();
+                    // echo $gatti->secondaCategoria;
+                    ?>
+                </div>
+            </ul>
         </div>
         <div class="card" style="width: 18rem;">
             <?php
             echo $crocchette->getImg();
             ?>
-            <div class="card-body">
-
-                <?php
-                echo $crocchette->getFullData();
-                echo $crocchette->getData();
-                echo $crocchette->getCategoria();
-                ?>
-            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <?php
+                    echo $crocchette->getFullData();
+                    echo $crocchette->getData();
+                    ?>
+                </li>
+                <div class="card-footer">
+                    <?php
+                    echo $crocchette->getCategoria();
+                    ?>
+                </div>
+            </ul>
         </div>
         <div class="card" style="width: 18rem;">
             <?php
             echo $cuccia->getImg();
             ?>
-            <div class="card-body">
-                <?php
-                echo $cuccia->getFullData();
-                echo $cuccia->getData();
-                echo $cuccia->getCategoria();
-                ?>
-            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <?php
+                    echo $cuccia->getFullData();
+                    echo $cuccia->getData();
+                    ?>
+                </li>
+                <div class="card-footer">
+                    <?php
+                    echo $cuccia->getCategoria();
+                    ?>
+                </div>
+            </ul>
         </div>
     </div>
+
 </body>
 
 </html>

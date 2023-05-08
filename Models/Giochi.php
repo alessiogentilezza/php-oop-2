@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/Prodotti.php';
-require_once __DIR__ . '../Traits/DimensioniPacco.php';
+require_once __DIR__ . '/../Traits/DimensioniPacco.php';
 
 
 
